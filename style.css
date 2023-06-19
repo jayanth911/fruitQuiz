@@ -1,0 +1,485 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 2%;
+  }
+}
+
+::selection {
+  color: #fff;
+  background: #007bff;
+}
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn button {
+  font-size: 3vw;
+  font-weight: 500;
+  color: #007bff;
+  padding: 2vw 4vw;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.info_box {
+  width: 90%;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.info_box .info-title {
+  height: 4vw;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  padding: 0 4vw;
+  border-radius: 5px 5px 0 0;
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+.info_box .info-list {
+  padding: 2vw 4vw;
+}
+
+.info_box .info-list .info {
+  margin: 1vw 0;
+  font-size: 1.7vw;
+}
+
+.info_box .info-list .info span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.info_box .buttons {
+  height: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 4vw;
+  border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button {
+  margin: 0 1vw;
+  height: 3vw;
+  width: 10vw;
+  font-size: 1.6vw;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.info_box .buttons button:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .start_btn button {
+    font-size: 4vw;
+    padding: 3vw 5vw;
+  }
+
+  .info_box {
+    width: 90%;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  .info_box .info-title {
+    height: 7vw;
+    font-size: 4vw;
+    padding: 0 6vw;
+  }
+
+  .info_box .info-list {
+    padding: 4vw 6vw;
+  }
+
+  .info_box .info-list .info {
+    margin: 2vw 0;
+    font-size: 3.5vw;
+  }
+
+  .info_box .buttons {
+    height: 7vw;
+    padding: 0 6vw;
+  }
+
+  .info_box .buttons button {
+    margin: 0 2vw;
+    height: 6vw;
+    width: 20vw;
+    font-size: 3.2vw;
+  }
+}
+
+/*Quiz Box*/
+.quiz_box {
+  width: 90%;
+  max-width: 550px;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.quiz_box header {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 5%;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz_box header .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quiz_box header .timer {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+  max-width: 145px;
+}
+
+/* make .time_left_txt responsive */
+@media (max-width: 767px) {
+  .quiz_box header .timer .time_left_txt {
+    font-size: 14px;
+  }
+}
+.quiz_box header .timer .time_left_txt {
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+/* make timer_sec position absolute */
+@media (max-width: 767px) {
+  .quiz_box header .timer .timer_sec {
+    font-size: 14px;
+    height: 25px;
+    width: 40px;
+  }
+}
+
+.quiz_box header .timer .timer_sec {
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+}
+
+.quiz_box header .time_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8px;
+  width: 0%;
+  background: #ebf5b3;
+  transition: width 0.2s ease;
+}
+
+section {
+  padding: 5% 5%;
+  background: #fff;
+}
+
+section .que_text {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+section .option_list {
+  padding: 10px 0;
+  display: block;
+}
+
+section .option_list .option {
+  background: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 17px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .option_list .option:last-child {
+  margin-bottom: 0;
+}
+
+section .option_list .option:hover {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+}
+
+section .option_list .option.correct {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+section .option_list .option.incorrect {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+section .option_list .option.disabled {
+  pointer-events: none;
+}
+
+section .option_list .option .icon {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  line-height: 24px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(255, 149, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.discount {
+  font-size: 40px;
+  font-weight: bold;
+  color: blue;
+  margin-bottom: 10px;
+}
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.option_list .option .icon.tick {
+  color: #23903c;
+  border-color: #23903c;
+  background: #d4edda;
+}
+
+.option_list .option .icon.cross {
+  color: #a42834;
+  background: #f8d7da;
+  border-color: #a42834;
+}
+
+footer {
+  height: 60px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+}
+
+footer .total_que span {
+  display: flex;
+  user-select: none;
+}
+
+footer .total_que span p {
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+footer .total_que span p:first-child {
+  padding-left: 0;
+}
+
+footer button {
+  height: 40px;
+  padding: 0 5%;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  background: #007bff;
+  border: 1px solid #007bff;
+  line-height: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+footer button:hover {
+  background: #0263ca;
+}
+
+footer button.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.result_box {
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  padding: 5% 5%;
+  width: 90%;
+  max-width: 450px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.result_box .icon {
+  font-size: 100px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.result_box .complete_text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.result_box .score_text span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.result_box .score_text span p {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.result_box .buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.result_box .buttons button {
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.result_box .buttons button.share {
+  background: #007bff;
+  border: 1px solid #007bff;
+  color: #fff;
+}
+
+.result_box .buttons button.restart {
+  background: #fff;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
