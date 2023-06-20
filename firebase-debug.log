@@ -1,0 +1,144 @@
+[debug] [2023-06-20T01:45:44.645Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T01:45:44.648Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jayan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-06-20T01:45:44.649Z] CLI Version:   12.4.0
+[debug] [2023-06-20T01:45:44.650Z] Platform:      win32
+[debug] [2023-06-20T01:45:44.650Z] Node Version:  v16.17.0
+[debug] [2023-06-20T01:45:44.651Z] Time:          Tue Jun 20 2023 07:15:44 GMT+0530 (India Standard Time)
+[debug] [2023-06-20T01:45:44.652Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-20T01:45:44.664Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-20T01:45:44.665Z] > authorizing via signed-in user (mj7676090@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jayan\Desktop\projects\fruitQuiz\basic
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-06-20T01:46:25.398Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-06-20T01:46:25.398Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"FruitQuiz","name":"Fruitquiz"}
+[debug] [2023-06-20T01:46:26.903Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-06-20T01:46:26.904Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-06-20T01:46:27.115Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\jayan\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\jayan\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-06-20T01:47:24.046Z] ----------------------------------------------------------------------
+[debug] [2023-06-20T01:47:24.049Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jayan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-06-20T01:47:24.050Z] CLI Version:   12.4.0
+[debug] [2023-06-20T01:47:24.050Z] Platform:      win32
+[debug] [2023-06-20T01:47:24.050Z] Node Version:  v16.17.0
+[debug] [2023-06-20T01:47:24.051Z] Time:          Tue Jun 20 2023 07:17:24 GMT+0530 (India Standard Time)
+[debug] [2023-06-20T01:47:24.052Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-20T01:47:24.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-20T01:47:24.063Z] > authorizing via signed-in user (mj7676090@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jayan\Desktop\projects\fruitQuiz\basic
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-06-20T01:48:06.187Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-06-20T01:48:06.188Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"quizappv1","name":"juicequiz"}
+[debug] [2023-06-20T01:48:08.071Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-06-20T01:48:08.072Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.7255680501609543445"}
+[debug] [2023-06-20T01:48:08.073Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 [none]
+[debug] [2023-06-20T01:48:09.699Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 200
+[debug] [2023-06-20T01:48:09.699Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 {"name":"operations/cp.7255680501609543445"}
+[debug] [2023-06-20T01:48:10.211Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:10.212Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 [none]
+[debug] [2023-06-20T01:48:11.773Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 200
+[debug] [2023-06-20T01:48:11.773Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7255680501609543445 {"name":"operations/cp.7255680501609543445","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"303646754396","projectId":"quizappv1","lifecycleState":"ACTIVE","name":"juicequiz","createTime":"2023-06-20T01:48:12.814Z"}}
+[debug] [2023-06-20T01:48:11.776Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/quizappv1:addFirebase [none]
+[debug] [2023-06-20T01:48:16.258Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/quizappv1:addFirebase 200
+[debug] [2023-06-20T01:48:16.259Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/quizappv1:addFirebase {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:16.259Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:17.282Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:17.282Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:17.795Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:17.796Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:19.121Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:19.122Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:20.132Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:20.134Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:21.192Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:21.192Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:23.207Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:23.208Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:24.155Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:24.155Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:28.156Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:28.157Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:29.186Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:29.187Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5"}
+[debug] [2023-06-20T01:48:37.190Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2023-06-20T01:48:37.192Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 [none]
+[debug] [2023-06-20T01:48:37.960Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 200
+[debug] [2023-06-20T01:48:37.960Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5 {"name":"operations/workflows/NjBjY2JmNTYtZTkzNi00ZTBlLWE1ZTUtNmFkNmY3MDMyNTA5","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"quizappv1","projectNumber":"303646754396","displayName":"juicequiz","name":"projects/quizappv1","resources":{"hostingSite":"quizappv1"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: quizappv1
+[info]    - Project Name: juicequiz
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/quizappv1/overview
+[info] i  Using project quizappv1 (juicequiz) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-06-20T01:49:31.905Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-06-20T01:49:32.103Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-06-20T01:49:32.103Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.22.2","browserURL":"https://www.gstatic.com/firebasejs/9.22.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.22.2/firebase.tgz"},"live":{"version":"9.22","browserURL":"https://www.gstatic.com/firebasejs/live/9.22/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.22/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.22.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.22.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.22.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.22.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.22.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.22.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.22.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.memory.js"}}
+[info] +  Wrote ./index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\jayan\Desktop\projects\fruitQuiz\basic 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=272210446&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-06-20T01:54:43.042Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-06-20T01:54:43.043Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-06-20T01:54:43.443Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-06-20T01:54:43.443Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-06-20T01:54:43.458Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-06-20T01:54:43.848Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-06-20T01:54:43.848Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"mickelJs","id":137130759,"node_id":"U_kgDOCCxzBw","avatar_url":"https://avatars.githubusercontent.com/u/137130759?v=4","gravatar_id":"","url":"https://api.github.com/users/mickelJs","html_url":"https://github.com/mickelJs","followers_url":"https://api.github.com/users/mickelJs/followers","following_url":"https://api.github.com/users/mickelJs/following{/other_user}","gists_url":"https://api.github.com/users/mickelJs/gists{/gist_id}","starred_url":"https://api.github.com/users/mickelJs/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mickelJs/subscriptions","organizations_url":"https://api.github.com/users/mickelJs/orgs","repos_url":"https://api.github.com/users/mickelJs/repos","events_url":"https://api.github.com/users/mickelJs/events{/privacy}","received_events_url":"https://api.github.com/users/mickelJs/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2023-06-20T01:54:13Z","updated_at":"2023-06-20T01:54:13Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as mickelJs 
+[info] 

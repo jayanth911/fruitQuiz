@@ -11,7 +11,8 @@ let TotalQuestions = 10;
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
-const continue_btn = info_box.querySelector(".buttons .restart");
+ const continue_btn = info_box.querySelector(".buttons .restart");
+// const continue_btn = info_box.querySelector(".buttons");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
@@ -41,32 +42,10 @@ continue_btn.onclick = ()=>{
 
 
 
-const restart_quiz = result_box.querySelector(".buttons .restart");
-const quit_quiz = result_box.querySelector(".buttons .quit");
+// const restart_quiz = result_box.querySelector(".buttons .restart");
+// const quit_quiz = result_box.querySelector(".buttons .quit");
 
-// if restartQuiz button clicked
-restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 10; 
-    que_count = 0;
-    que_numb = 1;
-    userScore = 0;
-    widthValue = 0;
-    showQuetions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Time Left"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
-}
 
-// if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    window.location.reload(); //reload the current window
-}
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
@@ -101,24 +80,11 @@ function showQuetions(index) {
   let currentQuestion;
 
   // Select a random question from questionSet1
-  if (index < 4) {
+ 
     do {
       currentQuestion = questionSet1[Math.floor(Math.random() * questionSet1.length)];
     } while (selectedQuestions.includes(currentQuestion));
-  }
-  // Select a random question from questionSet2
-  else if (index < 7) {
-    do {
-      currentQuestion = questionSet2[Math.floor(Math.random() * questionSet2.length)];
-    } while (selectedQuestions.includes(currentQuestion));
-  }
-  // Select a random question from questionSet3
-  else {
-    do {
-      currentQuestion = questionSet3[Math.floor(Math.random() * questionSet3.length)];
-    } while (selectedQuestions.includes(currentQuestion));
-  }
-
+  
   selectedQuestions.push(currentQuestion); // Add the selected question to the array
   correcAns = currentQuestion.answer; //getting correct answer from array
   let que_tag =
@@ -200,16 +166,16 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     
     if (userScore === 10) {
-        let scoreTag = '<div class="circle" style="background-color: ">10/10</div><div class="discount">50% discount</div><div class="congrats">Congratulations! 🎉</div>';
+        let scoreTag = '<div class="circle" style="background-color: black ">10/10</div><div class="discount">50% discount</div><div class="congrats">Congratulations! 🎉</div>';
         scoreText.innerHTML = scoreTag;
     } else if (userScore >= 7) {
-        let scoreTag = '<div class="circle" style="background-color: ">9/10</div><div class="discount">30% discount</div><div class="congrats">Congratulations! 🎉</div>';
+        let scoreTag = '<div class="circle" style="background-color: black ">'+userScore+'/'+ TotalQuestions+'</div><div class="discount">30% discount</div><div class="congrats">Congratulations! 🎉</div>';
         scoreText.innerHTML = scoreTag;
     } else if (userScore >= 5) {
-        let scoreTag = '<div class="circle" style="background-color: ">8/10</div><div class="discount">20% discount</div><div class="congrats">Congratulations! 🎉</div>';
+        let scoreTag = '<div class="circle" style="background-color: black ">'+userScore+'/'+ TotalQuestions+'</div><div class="discount">20% discount</div><div class="congrats">Congratulations! 🎉</div>';
         scoreText.innerHTML = scoreTag;
     } else {
-        let scoreTag = '<div class="circle" style="background-color: ">'+userScore+'/'+ TotalQuestions+'</div><div class="congrats">Better Luck next time</div>';
+        let scoreTag = '<div class="circle" style="background-color: black ">'+userScore+'/'+ TotalQuestions+'</div><div class="congrats">Better Luck next time</div>';
         scoreText.innerHTML = scoreTag;
     }
 
@@ -289,22 +255,6 @@ function startTimerLine(time) {
       }
     }
   }
-
-// function startTimerLine(time){
-//     counterLine = setInterval(timer, 29);
-//     function timer(){
-//         time += 1; //upgrading time value with 1
-//         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-//         if(time > 549){ //if time value is greater than 549
-//             clearInterval(counterLine); //clear counterLine
-//         }
-//     }
-// }
-
-
- 
-
-
 function queCounter(index){
    
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ TotalQuestions +'</p> Questions</span>';

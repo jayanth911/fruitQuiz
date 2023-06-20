@@ -29,6 +29,35 @@ body {
   background: #007bff;
 }
 
+.board {
+  background-color: #edfe00;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 75px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 1px;
+}
+
+.heading_caption {
+  font-size: 16px;
+  padding: 1px;
+  color: #555;
+}
+
+
+
 .start_btn,
 .info_box,
 .quiz_box,
